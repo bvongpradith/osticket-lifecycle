@@ -2,16 +2,15 @@
 <img src="https://www.synaxiom.com/wp-content/uploads/2016/06/osticket.png" alt="osTicket logo"/>
 </p>
 
-<h1>osTicket - Ticket Lifecycle: Intake Through Resolution</h1>
-This tutorial outlines the lifecycle of a ticket from intake to resolution within the open-source help desk ticketing system osTicket. If you haven't already completed the installation/setup and configuration, go ahead and go back to my previous tutorial linked below.</p>
+<h1>osTicket Lifecycle</h1>
+In this tutorial, we will be going over the lifecycle of a ticket from creation to closing in osTicket. This tutorial has prerequisites that must be completed before continuing which will be linked below. </p>
 
-- [osTicket: Prerequisites and Installation](https://github.com/jacksonmalms/osticket-prereqs) (The end of this will lead you to the next tutorial, and from that next one, to here.)
-
-Side note: this one is going to be super short, it is really to just get you started so you can do some practice on your own. Oh, and don't forget to delete your resources in Azure or at least turn off the VM so you don't get any extra charges.</p>
+- [osTicket: Prerequisites and Installation](https://github.com/bvongpradith/osticket-prereqs)
+- [osTicket: Post-Installation Configuration](https://github.com/bvongpradith/osticket--post)
 
 <h2>Environments and Technologies Used</h2>
 
-- Microsoft Azure (Virtual Machines/Compute)
+- Microsoft Azure
 - Remote Desktop
 - Internet Information Services (IIS)
 - osTicket
@@ -21,17 +20,17 @@ Side note: this one is going to be super short, it is really to just get you sta
 
 - Windows 10</b> (21H2)
 
-<h2>High Level List of Steps</h2>
+<h2>Steps</h2>
 
-- Intake
+- Ticket Creation
 - Assignment and Communication
-- Working the Issue
+- Resolving Issue
 - Resolution
 
-<h2>Visual Walkthrough</h2>
+<h2>Detailed Steps</h2>
 
 <p>
-<img src="https://i.imgur.com/F9pNEtR.png"/>
+<img src="https://i.imgur.com/JRAbLzQ.png"/>
 </p>
 <p>
 First, in the VM go to http://localhost/osTicket/ and open a new ticket.
@@ -39,10 +38,10 @@ First, in the VM go to http://localhost/osTicket/ and open a new ticket.
 <br />
 
 <p>
-<img src="https://i.imgur.com/JRuHkIc.png"/>
+<img src="https://i.imgur.com/Ioir8j4.png"/>
 </p>
 <p>
-Now choose either Ken or Karen, a help topic, create whatever summary and description that you'd like, and then create the ticket.
+Next, use either Karen or Ken for the email and full name for the ticket. Choose a help topic and create a fake scenario that a customer might face. For this tutorial, we will be asking for password reset.
 </p>
 <br />
 
@@ -50,22 +49,20 @@ Now choose either Ken or Karen, a help topic, create whatever summary and descri
 <img src="https://i.imgur.com/o92b2CF.png"/>
 </p>
 <p>
-Now go to http://localhost/osTicket/scp/login.php in your VMs browser and go to the Agent Panel.
+Now go to http://localhost/osTicket/scp/login.php and go to the Agent Panel.
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/HWxKoFu.png"/>
+<img src="https://i.imgur.com/lmXHiC8.png"/>
 </p>
 <p>
-Now set the SLA to SEV-B and assign the ticket to an agent or the admin user.
+Afterwards, navigate to the tickets panel and select the ticket you created. Assign the ticket to either a user or admin and set the SLA plan to SEV-C since it can be done on a weekday when the customer will need to log in. Depending on the severity of the ticket, it will be assigned differently.
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/pqUE1tr.png"/>
+<img src="https://i.imgur.com/NPdo5H2.png"/>
 </p>
 <p>
-Then respond to the ticket with any response you want and decide if the ticket should remain open or resolved if you implemented a solution and fixed the issue. Then just continue to practice making up/creating tickets and working through them as many times as you want!
-  
-Congrats, you've made it through all three of my osTicket tutorials/labs! Also, don't forget to clean up your resources in Azure or turn off your VM so you don't incur extra charges.
+Finally, you will be able to respond to the ticket and decide if it can be resolved or stay open. 
